@@ -3,6 +3,7 @@ int Buzzer=4 ;
 int analog_pin=A0 ;
 int fan=A1 ;
 
+
 void setup() {
   Serial.begin(9600);
    pinMode(led_pin, OUTPUT);
@@ -11,10 +12,12 @@ void setup() {
    pinMode(fan,OUTPUT);
 }
 
+
 void loop() {
   int conc ;                     // concentation(ppm)
   conc=analogRead(analog_pin);
    //Serial.println(temp);
+  
   if(conc>270)
   {
     Serial.println("Gas Detection!!");  
